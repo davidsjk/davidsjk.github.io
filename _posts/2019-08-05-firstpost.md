@@ -52,3 +52,5 @@ Here's another image using Kramdown:
 Here's some masthead
 
 $$z=x+y$$
+
+Let's stay calm and figure it out.
