@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "About"
-    url: /about/
+    url: https://davidsjk.github.io/about/
   - title: "Data Science"
-    url: /data_science/
+    url: https://davidsjk.github.io/data_science/
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
