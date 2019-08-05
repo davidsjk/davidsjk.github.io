@@ -112,8 +112,8 @@ author:
   bio              : "Data Science Portfolio"
   location         : "Los Angeles, CA"
   email            : "sjdkim0412@gmail.com"
-  github           : "https://github.com/davidsjk"
-  linkedin         : "https://www.linkedin.com/in/davidsjkim"
+  github           : "davidsjk"
+  linkedin         : "sunjindkim"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
