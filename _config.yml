@@ -4,14 +4,14 @@ subtitle: Data Analyst
 email: sjdkim0412@gmail.com
 description: A site dedicated to Data Science, created by David Kim.
 baseurl: "/david_data_science" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
-author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
+url: https://davidsjk.github.io # the base hostname & protocol for your site
+author: Sunjin David Kim
+street_address:
+city:
+state:
+zip_code:
 country: United States of America
-phone: (716) 555-5555
+phone: (714) 321-4583
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
