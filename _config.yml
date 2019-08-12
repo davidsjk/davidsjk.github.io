@@ -3,7 +3,7 @@ title: Sunjin David Kim
 subtitle: Data Analyst
 email: sjdkim0412@gmail.com
 description: A site dedicated to Data Science, created by David Kim.
-baseurl: "/david_data_science" # the subpath of your site, e.g. /blog
+baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
 url: https://davidsjk.github.io # the base hostname & protocol for your site
 author: Sunjin David Kim
 street_address:
