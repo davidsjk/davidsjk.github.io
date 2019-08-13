@@ -1,6 +1,5 @@
 # Sunjin David Kim's Data Science Portfolio
 
-For the actual website go to  [SDK Portfolio](https://davidsjk.github.io).
+Please go to  [SDK Portfolio](https://davidsjk.github.io) to check out my portfolio.
 
-Contains basic configuration to get you a site with:
 
