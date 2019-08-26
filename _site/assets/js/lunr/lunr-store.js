@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["blog"],
         "tags": ["Jekyll","update"],
         "url": "http://localhost:4000/blog/welcome-to-jekyll/",
+        "teaser":null},{
+        "title": "City Score",
+        "excerpt":"Predicting City Score Using Venue Frequency Introduction: Every year, UN News analysis the 125 most populous cities of United States to determine the best cities to live. These cities are given an overall score from 0-10, and a ranking from 1-125. In order to be competitive in the Realestate business,...","categories": ["blog"],
+        "tags": ["Coursera","Foursquare","Data Analysis","Data Science"],
+        "url": "http://localhost:4000/blog/Coursera-Capstone/",
         "teaser":null}]

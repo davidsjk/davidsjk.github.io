@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Post: Notice - SDK</title>
-<meta name="description" content="A notice displays information that explains nearby content. Often used to call attention to a particular detail.">
+<!-- begin _includes/seo.html --><title>City Score - SDK</title>
+<meta name="description" content="Predicting City Score Using Venue Frequency">
 
 
   <meta name="author" content="Sunjin David Kim">
@@ -19,26 +19,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="SDK">
-<meta property="og:title" content="Post: Notice">
-<meta property="og:url" content="http://localhost:4000/blog/post-notice/">
+<meta property="og:title" content="City Score">
+<meta property="og:url" content="http://localhost:4000/blog/Coursera-Capstone/">
 
 
-  <meta property="og:description" content="A notice displays information that explains nearby content. Often used to call attention to a particular detail.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2010-02-05T00:00:00-08:00">
+  <meta property="og:description" content="Predicting City Score Using Venue Frequency">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/blog/post-notice/">
+
+  <meta property="article:published_time" content="2019-08-25T12:34:30-07:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/Coursera-Capstone/">
 
 
 
@@ -268,15 +268,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Post: Notice">
-    <meta itemprop="description" content="A notice displays information that explains nearby content. Often used to call attention to a particular detail.">
-    <meta itemprop="datePublished" content="February 05, 2010">
+    <meta itemprop="headline" content="City Score">
+    <meta itemprop="description" content="Predicting City Score Using Venue Frequency">
+    <meta itemprop="datePublished" content="August 25, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Post: Notice
+          <h1 id="page-title" class="page__title" itemprop="headline">City Score
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -284,7 +284,7 @@
 
 
 
-  1 minute read
+  3 minute read
 </p>
           
         </header>
@@ -292,57 +292,48 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>A notice displays information that explains nearby content. Often used to call attention to a particular detail.</p>
+        <p>Predicting City Score Using Venue Frequency</p>
 
-<p>When using Kramdown <code class="highlighter-rouge">{: .notice}</code> can be added after a sentence to assign the <code class="highlighter-rouge">.notice</code> to the <code class="highlighter-rouge">&lt;p&gt;&lt;/p&gt;</code> element.</p>
+<p class="notice"><strong>Introduction:</strong> Every year, UN News analysis the 125 most populous cities of United States to determine the best cities to live. These cities are given an overall score from 0-10, and a ranking from 1-125. In order to be competitive in the Realestate business, or to personally purchase home in a nice neighborhood before the prices of homes rise, it is important to use data to predict potential cities that will become popular in the future. Although the Rankings provided by USNEWS is very helpful in determining current hotspots, as potential home buyers, it is imperative to be ahead of the curve and purchase a home in a city before the popularity and prices rise. Therefore, using the data gathered from Foursquare, we will attempt to identify variables that correllate with city popularity represented by the City Scores, which could potentially help us find cities that will become popular in the future.</p>
 
-<p class="notice"><strong>Changes in Service:</strong> We just updated our <a href="#">privacy policy</a> here to better service our customers. We recommend reviewing the changes.</p>
+<p><strong>Interest</strong></p>
 
-<p class="notice--primary"><strong>Primary Notice:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. <a href="#">Praesent libero</a>. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+<p>This analysis may be useful to the following groups:</p>
 
-<p class="notice--info"><strong>Info Notice:</strong> Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+<ol>
+  <li>Real-estate Agents looking for potential cities to work in.</li>
+  <li>Individuals looking for a good place to live.</li>
+  <li>City developers and officials seeking to improve their cities can also use this information to determine what types of venues to increase or decrease.</li>
+</ol>
 
-<p class="notice--warning"><strong>Warning Notice:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Integer nec odio</a>. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+<p><strong>Procedure</strong></p>
 
-<p class="notice--danger"><strong>Danger Notice:</strong> Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+<p>We began by creating a dataframe with the 5 top scoring cities and the 5 lowest scoring cities.
+<img src="/assets//images/Picture1.jpg" alt="5 top scoring cities and the 5 lowest scoring cities" /></p>
 
-<p class="notice--success"><strong>Success Notice:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at <a href="#">nibh elementum</a> imperdiet.</p>
+<p>Next, using the Foursquare API, we gathered venue information of each city.
+The frequency of each venue category for each city was calculated using the information gathered from Foursquare.
+<img src="/assets//images/Picture2.jpg" alt="Venue Frequency" /></p>
 
-<p>Want to wrap several paragraphs or other elements in a notice? Using Liquid to capture the content and then filter it with <code class="highlighter-rouge">markdownify</code> is a good way to go.</p>
+<p class="notice--info"><strong>K-Clustering:</strong> To explore the data gained from Foursquare, we conducted a K-cluster analysis to see if the venue frequencies by themselves would create clusters that more or less aligned with their city scores. The initial analysis with the 10 cities revealed that there were cities with not enough data that was skewing the clusters. The initial cluster visualized onto a map can be found below.
+Upon eliminating the cities that did not have enough venues and reducing the k to 2, the cluster formed according to city scores, with Austin and Denver in once cluster and San Juan, Stockton, and Mobile in the other.</p>
+<p><img src="/assets//images/Picture3.jpg" alt="K-clustering of Cities based on Venue Frequency" /></p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% capture notice-2 %}
-#### New Site Features
+<p><strong>Correlation</strong></p>
 
-* You can now have cover images on blog pages
-* Drafts will now auto-save while writing
-{% endcapture %}
+<p>Using Pandas .corr() function, the correlation of the venue frequency and the city scores were calculated. Upon inspection, 7 venues were found to be positive correlated with the city scores with a correlation score greater than 0.83. (Café, Clothing Store, Dessert Shop, Restaurant, Salad Place, and Theater)</p>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notice"</span><span class="nt">&gt;</span>{{ notice-2 | markdownify }}<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+<p class="notice--info"><strong>Multi Linear Regression Model:</strong>   A multi linear regression model as created using the data from the remaining 5 cities. The city score was chosen for the dependent variable and the frequency of the 7 positively correlated venues were set as the independent variable. The model was tested using the venue frequency data gathered for the 4 test cities ((San Francisco, Phoenix, Memphis, and Scranton), and the predicted score was compared to the actual scores found on US NEWS.</p>
+<p><img src="/assets//images/Picture4.jpg" alt="Predictive Model" /></p>
 
-<div class="notice">
-  
-<h4 id="new-site-features">New Site Features</h4>
+<p class="notice--success"><strong>Conclusion:</strong> 1.	Conclusions
+In this study, I analyzed the relationship between venue frequency and the overall city score based on the study conducted by US News. Using the correlation function and the K-cluster analysis, I identified that there was a positive correlation between the city score and the venue frequency of 7 venue categories (Café, Clothing Store, Dessert Shop, Restaurant, Salad Place, and Theater). I created a Multi Linear Regression Model and tested my theory that city scores can be predicted using venue category frequency. Although, many improvements can be made, the model was fairly successful in predicting the scores of randomly picked cities. Such prediction models can be used to assist real-estate agents and individuals looking to purchase a home in deciding which city to invest in. It can also help city planners in picking the next venue to invite  into their city.</p>
 
-<ul>
-  <li>You can now have cover images on blog pages</li>
-  <li>Drafts will now auto-save while writing</li>
-</ul>
+<p>References:</p>
 
-</div>
+<p><a href="https://realestate.usnews.com/places/rankings/best-places-to-live?sort=overall&amp;high_to_low=true">U.S. NEWS - Best Places to Live</a></p>
 
-<p>Or you could skip the capture and stick with straight HTML.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notice"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Message<span class="nt">&lt;/h4&gt;</span>
-  <span class="nt">&lt;p&gt;</span>A basic message.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
-<div class="notice">
-  <h4>Message</h4>
-  <p>A basic message.</p>
-</div>
+<p><a href="https://foursquare.com">Foursquare</a></p>
 
         
       </section>
@@ -363,11 +354,19 @@
     
       
       
-      <a href="/tags/#notice" class="page__taxonomy-item" rel="tag">notice</a><span class="sep">, </span>
+      <a href="/tags/#coursera" class="page__taxonomy-item" rel="tag">Coursera</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#post-formats" class="page__taxonomy-item" rel="tag">Post Formats</a>
+      <a href="/tags/#data-analysis" class="page__taxonomy-item" rel="tag">Data Analysis</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#data-science" class="page__taxonomy-item" rel="tag">Data Science</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#foursquare" class="page__taxonomy-item" rel="tag">Foursquare</a>
     
     </span>
   </p>
@@ -388,37 +387,36 @@
     
       
       
-      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">Blog</a>
+      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">blog</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2010-02-05T00:00:00-08:00">February 05, 2010</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-25T12:34:30-07:00">August 25, 2019</time></p>
         
       </footer>
 
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?text=Post%3A+Notice%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fpost-notice%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=City+Score%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2FCoursera-Capstone%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fpost-notice%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2FCoursera-Capstone%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fpost-notice%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2FCoursera-Capstone%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/post-chat/" class="pagination--pager" title="Post: Chat
+      <a href="/blog/welcome-to-jekyll/" class="pagination--pager" title="Welcome to Jekyll!
 ">Previous</a>
     
     
-      <a href="/blog/post-quote/" class="pagination--pager" title="Post: Quote
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -432,35 +430,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/blog/Coursera-Capstone/" rel="permalink">City Score
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Predicting City Score Using Venue Frequency
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -546,6 +515,35 @@
 
 
   Mark Twain
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/post-notice/" rel="permalink">Post: Notice
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A notice displays information that explains nearby content. Often used to call attention to a particular detail.
 
 </p>
   </article>
